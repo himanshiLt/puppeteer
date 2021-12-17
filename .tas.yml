@@ -12,5 +12,5 @@ preRun:
     - npm run tsc-cjs
 postRun:
     - node --version
-configFile: "mocha-config/puppeteer-unit-tests.js"
+configFile: "./mocha-config/puppeteer-unit-tests.js"
 version: 1.0
