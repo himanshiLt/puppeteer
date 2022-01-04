@@ -1,16 +1,17 @@
----
-framework: "mocha"
+framework: mocha
+tier: xlarge
 postMerge:
-    pattern:
-    - "./test/**/*.spec.ts"            # Glob pattern to path where tests that should run post-merge are written
+  pattern:
+    - "./test/**/*.spec.ts"
 preMerge:
-    pattern:
-    - "./test/**/*.spec.ts"              # Glob pattern to path where tests that should run pre-merge are written
+  pattern:
+    - "./test/**/*.spec.ts"
 preRun:
-    - npm install
-    - npm run build
-    - npm run tsc-cjs
+     command:
+        - npm install
+        - npm run tsc
 postRun:
-    - node --version
+     command:
+        - node --version
 configFile: "./mocha-config/puppeteer-unit-tests.js"
-version: 1.0
+version: 2.0
