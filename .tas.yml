@@ -1,5 +1,5 @@
 framework: mocha
-tier: xlarge
+# tier: xlarge
 postMerge:
   pattern:
     - "./test/**/*.spec.ts"
